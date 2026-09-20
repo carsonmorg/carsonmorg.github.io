@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="这儿真美 - 发现中国最美自然风光与人文秘境。提供深度旅游攻略、摄影指南、目的地推荐及旅行灵感分享。">
+    <meta name="keywords" content="这儿真美, 旅游攻略, 自然风光, 摄影圣地, 人文景观">
+    <title>这儿真美 - 中国最美风光与旅行秘境探索指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c5f2d;
+            --secondary-color: #97bc62;
+            --accent-color: #e67e22;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f9fbf9;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/mountains/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .hero-btn:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Content Sections */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 0.8rem;
+        }
+
+        .hot-list li {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .hot-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .hot-list a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+
+        .hot-num {
+            background: #eee;
+            color: #666;
+            padding: 0 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            background-color: var(--white);
+            padding: 3rem 1.5rem;
+        }
+
+        .feature-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .feature-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .feature-text p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-image img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 3rem 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: #fafafa;
+        }
+
+        .faq-question:hover {
+            background: #f0f0f0;
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-light);
+            background: var(--white);
+        }
+
+        .faq-answer.open {
+            padding: 1.2rem;
+            max-height: 200px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 3rem 1.5rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #34495e;
+            padding-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-container {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-image {
+                order: -1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">
+            <span>✿</span> 这儿真美
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">自然风光</a></li>
+                <li><a href="#">人文古迹</a></li>
+                <li><a href="#">摄影指南</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+        <button class="search-btn" aria-label="搜索">🔍</button>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索未知的风景</h1>
+            <p>从巍峨的高山到静谧的湖泊，从繁华的都市到古老的村落，<strong>这儿真美</strong>，每一处都值得你停下脚步。</p>
+            <a href="#destinations" class="hero-btn">开始探索</a>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="feature-section">
+        <div class="feature-container">
+            <div class="feature-text">
+                <h2>为什么选择这里？</h2>
+                <p>我们致力于为您提供最真实、最全面的旅行灵感。无论您是独自背包客，还是家庭出游，我们都有适合您的目的地推荐和实用攻略。</p>
+                <ul style="list-style: none; margin-bottom: 1.5rem;">
+                    <li style="margin-bottom: 0.5rem;">✓ 深度挖掘小众秘境</li>
+                    <li style="margin-bottom: 0.5rem;">✓ 专业摄影构图建议</li>
+                    <li style="margin-bottom: 0.5rem;">✓ 实用的交通与住宿指南</li>
+                </ul>
+                <a href="#" class="card-link">了解更多关于我们的理念 &rarr;</a>
+            </div>
+            <div class="feature-image">
+                <img src="https://picsum.photos/seed/forest/600/400.jpg" alt="森林小径">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <div class="container" id="destinations">
+        <!-- Left Column: Content -->
+        <div class="main-content">
+            
+            <!-- Section: Nature -->
+            <section>
+                <h2 class="section-title">自然奇观</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/river/400/300.jpg" alt="九寨沟" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">川西秘境</span>
+                            <h3 class="card-title">九寨沟：上帝打翻的调色盘</h3>
+                            <p class="card-desc">四季变换的九寨沟拥有令人窒息的碧水与彩林，是摄影爱好者的天堂。</p>
+                            <a href="#" class="card-link">阅读攻略 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/snow/400/300.jpg" alt="雪景" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">冬季限定</span>
+                            <h3 class="card-title">长白山：触摸天池的神秘</h3>
+                            <p class="card-desc">冬季的长白山银装素裹，天池的景色在云雾缭绕中若隐若现。</p>
+                            <a href="#" class="card-link">阅读攻略 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/beach/400/300.jpg" alt="海边" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">海滨度假</span>
+                            <h3 class="card-title">亚龙湾：中国最美的海湾</h3>
+                            <p class="card-desc">拥有绵长的沙滩和清澈的海水，是享受阳光沙滩的绝佳去处。</p>
+                            <a href="#" class="card-link">阅读攻略 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section: Culture -->
+            <section style="margin-top: 3rem;">
+                <h2 class="section-title">人文古迹</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/temple/400/300.jpg" alt="古寺" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">历史建筑</span>
+                            <h3 class="card-title">敦煌莫高窟：千年壁画的艺术</h3>
+                            <p class="card-desc">走进沙漠中的艺术宝库，感受丝绸之路上的文明交融。</p>
+                            <a href="#" class="card-link">阅读攻略 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/village/400/300.jpg" alt="古镇" class="card-image">
+                        <div class="card-body">
+                            <span class="card-tag">古镇风情</span>
+                            <h3 class="card-title">乌镇：枕水而眠的江南梦</h3>
+                            <p class="card-desc">小桥流水人家，体验最地道的江南水乡生活。</p>
+                            <a href="#" class="card-link">阅读攻略 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Section: Photography Tips -->
+            <section style="margin-top: 3rem;">
+                <h2 class="section-title">旅行摄影指南</h2>
+                <article class="card" style="flex-direction: row; align-items: center;">
+                    <img src="https://picsum.photos/seed/camera/200/200.jpg" alt="相机" class="card-image" style="height: 100%; width: 200px;">
+                    <div class="card-body">
+                        <h3 class="card-title">如何拍出“这儿真美”的大片？</h3>
+                        <p class="card-desc">构图、光线、色彩是摄影的三大要素。在旅行中，不要只顾着看风景，更要学会用镜头记录风景的细节与情感。本文将分享几个实用的构图技巧，帮助您捕捉瞬间的美。</p>
+                        <a href="#" class="card-link">查看详细技巧 &rarr;</a>
+                    </div>
+                </article>
+            </section>
+
+        </div>
+
+        <!-- Right Column: Sidebar -->
+        <aside class="sidebar">
+            <!-- Widget: Popular Destinations -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">本月热门推荐</h3>
+                <ul class="hot-list">
+                    <li><a href="#"><span>稻城亚丁</span> <span class="hot-num">1</span></a></li>
+                    <li><a href="#"><span>恩施大峡谷</span> <span class="hot-num">2</span></a></li>
+                    <li><a href="#"><span>喀纳斯湖</span> <span class="hot-num">3</span></a></li>
+                    <li><a href="#"><span>青海湖</span> <span class="hot-num">4</span></a></li>
+                    <li><a href="#"><span>云南沙溪古镇</span> <span class="hot-num">5</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Widget: Newsletter -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">订阅我们的周刊</h3>
+                <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">每周精选5个绝美目的地，不错过任何一处风景。</p>
+                <input type="email" placeholder="您的邮箱地址" style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                <button style="width: 100%; padding: 0.5rem; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer;">订阅</button>
+            </div>
+
+            <!-- Widget: Categories -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">分类浏览</h3>
+                <ul style="font-size: 0.95rem;">
+                    <li style="margin-bottom: 0.5rem;"><a href="#">🏔️ 高山湖泊</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#">🌊 海岛沙滩</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#">🏯 历史古迹</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#">🌸 花海花田</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#">🍂 秋季赏叶</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="section-title" style="text-align: center; border: none;">常见问题</h2>
+        <div class="faq-item">
+            <div class="faq-question">如何规划一次完美的旅行？</div>
+            <div class="faq-answer">
+                <p>规划旅行首先需要确定目的地和预算，其次要研究当地的气候、交通和住宿情况。建议提前预订门票和住宿，并准备必要的旅行保险。</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">“这儿真美”适合什么样的旅行者？</div>
+            <div class="faq-answer">
+                <p>我们适合所有热爱自然、喜欢摄影、追求深度体验的旅行者。无论您是独自背包客、情侣出游还是家庭度假，都能在这里找到有价值的信息。</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">你们提供包团服务吗？</div>
+            <div class="faq-answer">
+                <p>目前我们主要提供图文攻略和自助游指南。如果您需要定制化的旅行服务，请联系我们的客服团队进行咨询。</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>这儿真美</h3>
+            <p style="font-size: 0.9rem; line-height: 1.8;">发现世界之美，分享旅行快乐。我们致力于为每一位旅行者提供最真实、最实用的旅行指南。</p>
+        </div>
+        <div class="footer-col">
+            <h3>快速链接</h3>
+            <ul>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">免责声明</a></li>
+                <li><a href="#">联系方式</a></li>
+                <li><a href="#">加入我们</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>热门分类</h3>
+            <ul>
+                <li><a href="#">自然风光</a></li>
+                <li><a href="#">城市探索</a></li>
+                <li><a href="#">美食之旅</a></li>
+                <li><a href="#">摄影技巧</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2023 这儿真美 版权所有.
+    </div>
+</footer>
+
+<script>
+    // Simple FAQ Interaction
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const isOpen = answer.classList.contains('open');
+            
+            // Close all other answers
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.classList.remove('open');
+            });
+
+            // Toggle current answer
+            if (!isOpen) {
+                answer.classList.add('open');
+            }
+        });
+    });
+
+    // Mobile Menu Toggle (Simple implementation)
+    const searchBtn = document.querySelector('.search-btn');
+    searchBtn.addEventListener('click', () => {
+        // In a real app, this would open a modal or expand search
+        const prompt = prompt("请输入您想查找的目的地：");
+        if(prompt) {
+            alert(`正在为您搜索关于 "${prompt}" 的内容...`);
+        }
+    });
+</script>
+
+</body>
+                  </html>
