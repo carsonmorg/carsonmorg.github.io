@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="她是不是没忘干净？深度解析情感记忆、旧情难忘的心理机制及如何走出过去，提供情感咨询与心理疏导建议。">
+    <meta name="keywords" content="她是不是没忘干净,情感咨询,心理疏导,旧情难忘,情感挽回,心理分析">
+    <title>她是不是没忘干净 - 深度情感心理分析与疏导指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #7c3aed;
+            --primary-light: #ddd6fe;
+            --text-main: #1f2937;
+            --text-secondary: #4b5563;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+            --accent-pink: #ec4899;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #6d28d9;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(124, 58, 237, 0.1);
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Article Cards */
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #e5e7eb;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #9ca3af;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 20px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: "?";
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            padding-left: 34px;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover td {
+            background-color: #f9fafb;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #d1d5db;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <span>心语空间</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#analysis">心理分析</a></li>
+                    <li><a href="#signs">表现迹象</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#contact">咨询</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">寻求帮助</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>她是不是没忘干净？<br>读懂那些潜藏的思念</h1>
+                <p>面对旧情人的蛛丝马迹，你是否感到困惑？通过专业的心理学视角，帮你理性分析她的行为，判断她是真的释怀，还是余情未了。</p>
+                <div class="hero-tags">
+                    <span class="tag">情感挽回</span>
+                    <span class="tag">心理分析</span>
+                    <span class="tag">自我提升</span>
+                    <span class="tag">前任处理</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Analysis Section -->
+        <section id="analysis">
+            <div class="container">
+                <div class="section-header">
+                    <h2>深度解析：为何总感觉“没忘干净”？</h2>
+                    <p>“她是不是没忘干净”往往源于我们内心的不安全感。其实，遗忘不是非黑即白的开关，而是一个漫长的过程。</p>
+                </div>
+                <div class="grid-2">
+                    <article class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">记忆的“蔡格尼克效应”</h3>
+                            <p class="card-excerpt">心理学中的“蔡格尼克效应”指出，人们对未完成事项的记忆远比已完成事项深刻。如果她的关系有遗憾或未解的矛盾，这种未完成感会让她反复回想。</p>
+                            <a href="#" style="color: var(--primary-color); font-weight: 600; font-size: 0.9rem;">阅读更多 &rarr;</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">习惯与环境的触发</h3>
+                            <p class="card-excerpt">她并不是在刻意怀念，而是被环境触发。看到共同喜欢的电影、听到熟悉的歌曲、甚至经过熟悉的街道，这些外部线索都会唤起潜意识的记忆。</p>
+                            <a href="#" style="color: var(--primary-color); font-weight: 600; font-size: 0.9rem;">阅读更多 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signs Section -->
+        <section id="signs" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>行为迹象：她是否真的没忘干净？</h2>
+                    <p>区分“偶尔想起”与“刻意联系”，避免误判。</p>
+                </div>
+                
+                <div class="grid-3">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/emotion1/400/250" alt="查看社交媒体">
+                            <span class="card-category">社交动态</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">窥探你的社交动态</h3>
+                            <p class="card-excerpt">频繁点赞你过去发的朋友圈，或者在不明显的时间点访问你的主页。这通常是潜意识里想确认你近况的表现。</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/emotion2/400/250" alt="相似喜好">
+                            <span class="card-category">共同话题</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">刻意寻找共同话题</h3>
+                            <p class="card-excerpt">在聊天中不经意提起你们过去一起去过的地方、吃过的餐厅。这不仅仅是闲聊，而是试图寻找情感连接的切入点。</p>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://picsum.photos/seed/emotion3/400/250" alt="情绪波动">
+                            <span class="card-category">情绪反应</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">对你的新恋情反应敏感</h3>
+                            <p class="card-excerpt">当得知你开始新生活时表现出惊讶、失落或回避。这种情绪波动说明她并没有像表面看起来那样彻底放下。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2>理性判断：放下 vs 未放下</h2>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>特征维度</th>
+                            <th>已经放下（释怀）</th>
+                            <th>没忘干净（余情）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>主动联系频率</strong></td>
+                            <td>几乎不联系，除非有急事</td>
+                            <td>偶尔闲聊，分享生活碎片</td>
+                        </tr>
+                        <tr>
+                            <td><strong>提及过去</strong></td>
+                            <td>视过去为成长的一部分，平淡提及</td>
+                            <td>试图重提往事，寻找共同回忆</td>
+                        </tr>
+                        <tr>
+                            <td><strong>面对新恋情</strong></td>
+                            <td>送上祝福，内心平静</td>
+                            <td>表现出失落、嫉妒或试图挽回</td>
+                        </tr>
+                        <tr>
+                            <td><strong>情感状态</strong></td>
+                            <td>专注于当下，对未来有规划</td>
+                            <td>偶尔情绪低落，感到空虚</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" style="background-color: #f3f4f6;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于“她是不是没忘干净”的深度心理问答。</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">如果不联系，她是不是就彻底忘了？</div>
+                        <div class="faq-answer">不一定。不联系不代表没忘。有些人习惯将情感深埋心底，表面平静不代表内心毫无波澜。真正的放下往往是“想起来时心如止水”，而不是“完全不记得”。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">看到她过得不好，我会感到开心吗？</div>
+                        <div class="faq-answer">如果你感到开心，说明你内心深处依然有怨气或未解决的情结。真正的释怀是看到她过得不好时，内心毫无波澜，甚至只有淡淡的怜悯。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何判断她是想复合还是只是寂寞？</div>
+                        <div class="faq-answer">看她的行动是否有连贯性和深度。如果是寂寞，她会只谈当下的娱乐和无聊；如果是想复合，她会试图解决过去的问题，并展示真实的自我，而不仅仅是寻求陪伴。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action / Contact -->
+        <section id="contact" style="background-color: white; border: none;">
+            <div class="container" style="text-align: center;">
+                <h2 style="margin-bottom: 20px;">还在纠结？寻求专业帮助</h2>
+                <p style="margin-bottom: 30px; color: var(--text-secondary); max-width: 600px; margin-left: auto; margin-right: auto;">
+                    如果这种“她是不是没忘干净”的猜测已经严重影响你的生活、工作和新恋情，建议寻求专业的情感咨询师或心理咨询师的帮助。
+                </p>
+                <div style="display: inline-flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <a href="#" class="cta-btn" style="background-color: var(--primary-color);">预约一对一咨询</a>
+                    <a href="#" class="cta-btn" style="background-color: white; color: var(--primary-color); border: 1px solid var(--primary-color);">阅读自助指南</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>心语空间</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">专注于情感心理分析，帮助用户理性看待过去，拥抱未来。我们提供客观的分析视角和温暖的陪伴。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>相关栏目</h3>
+                    <ul>
+                        <li><a href="#">情感挽回技巧</a></li>
+                        <li><a href="#">分手后的心理调适</a></li>
+                        <li><a href="#">如何处理前任关系</a></li>
+                        <li><a href="#">爱情心理学</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>法律声明</h3>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 心语空间情感咨询平台. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
