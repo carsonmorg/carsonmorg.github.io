@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="茹毛饮血 - 原始生存与文明起源探索。深入解析人类早期狩猎采集生活、原始部落文化、史前图腾崇拜及人类进化史上的关键转折点。提供专业的历史科普与文明演变指南。">
+    <meta name="keywords" content="茹毛饮血, 原始社会, 史前文明, 狩猎采集, 人类进化, 史前文化">
+    <title>茹毛饮血-原始生存与文明起源探索指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5d4037;
+            --secondary-color: #8d6e63;
+            --accent-color: #d7ccc8;
+            --text-dark: #3e2723;
+            --text-light: #6d4c41;
+            --bg-color: #f5f5f5;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #ffab91;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: #ffab91;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.7)), url('https://picsum.photos/seed/prehistoric/1920/600.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff7043;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #f4511e;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 0 auto;
+        }
+
+        /* Concept Section */
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .concept-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .concept-text p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .concept-img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--secondary-color);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 40px;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            top: 0;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot { right: -8px; }
+        .timeline-item:nth-child(even) .timeline-dot { left: -8px; }
+
+        .timeline-content h4 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .timeline-content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        /* Comparison Table */
+        .comparison-wrapper {
+            overflow-x: auto;
+            margin-bottom: 60px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary-color);
+            list-style: none;
+            position: relative;
+            padding-right: 40px;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        details[open] summary::after { content: '-'; }
+
+        .faq-content {
+            padding: 20px;
+            color: var(--text-light);
+            border-top: 1px solid var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #bcaaa4;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; gap: 15px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+            .concept-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.8rem; }
+            .timeline::before { left: 20px; }
+            .timeline-item { width: 100%; padding-left: 50px !important; padding-right: 0 !important; text-align: left !important; }
+            .timeline-item:nth-child(odd) .timeline-dot { left: 12px; right: auto; }
+            .timeline-item:nth-child(even) .timeline-dot { left: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>❖</span> 茹毛饮血
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#concept">概念起源</a></li>
+                    <li><a href="#timeline">历史演变</a></li>
+                    <li><a href="#features">生活方式</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>探索人类文明的原始起点</h1>
+            <p>从狩猎采集到熟食文明的跨越，解读“茹毛饮血”背后的生存智慧与历史演变。</p>
+            <a href="#concept" class="btn">开始探索</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Concept Section -->
+        <section id="concept">
+            <div class="section-title">
+                <h2>什么是“茹毛饮血”</h2>
+                <p>深入理解这个成语的原始含义与历史背景</p>
+            </div>
+            <div class="concept-grid">
+                <div class="concept-text">
+                    <h3>原始生存状态</h3>
+                    <p>“茹毛饮血”原指人没有火，吃带毛带血的生肉。在人类漫长的史前时期，这是早期人类为了生存而采取的唯一饮食方式。</p>
+                    <h3>文明进化的标志</h3>
+                    <p>这一成语不仅是关于饮食习惯的描述，更是人类学会使用火、掌握熟食技术的转折点。熟食不仅提高了食物的消化吸收率，还改变了人类的大脑发育和体质结构。</p>
+                    <h3>文化隐喻</h3>
+                    <p>在现代语境中，该词常用来形容尚未开化的野蛮状态，或形容某种生活环境的艰苦与粗犷，保留了其原始的视觉冲击力。</p>
+                </div>
+                <div class="concept-img">
+                    <img src="https://picsum.photos/seed/fire/600/400.jpg" alt="原始火堆与生肉" style="width: 100%; height: auto; border-radius: 8px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline">
+            <div class="section-title">
+                <h2>历史演变时间线</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>旧石器时代早期</h4>
+                        <p>人类处于狩猎采集阶段，完全依赖自然食物，尚未掌握用火技术，处于“茹毛饮血”的原始生存状态。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>旧石器时代中期</h4>
+                        <p>人类开始有意识地使用天然火，虽然仍食用生肉，但火开始用于取暖和防御野兽，生存能力提升。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>旧石器时代晚期</h4>
+                        <p>火的使用更加普遍，人类学会了控制火种，熟食成为可能，为大脑的快速进化提供了营养基础。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>新石器时代</h4>
+                        <p>农业与畜牧业兴起，人类彻底告别了“茹毛饮血”的生食生活，建立了定居的文明社会。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <div class="section-title">
+                <h2>原始生活方式特征</h2>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🪨</div>
+                    <h3>石器工具</h3>
+                    <p>使用打制石器进行狩猎和切割，工具的粗糙与坚硬直接决定了食物处理的方式和效率。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🦌</div>
+                    <h3>狩猎采集</h3>
+                    <p>依赖大自然提供的现成食物，随着季节变化迁徙，食物来源不稳定，处于生存边缘。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3>火的使用</h3>
+                    <p>火是生存的关键，用于驱赶野兽、取暖和初步加工食物，是通往熟食文明的唯一钥匙。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section id="comparison">
+            <div class="section-title">
+                <h2>原始生存 vs 熟食文明</h2>
+            </div>
+            <div class="comparison-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>特征维度</th>
+                            <th>茹毛饮血 (原始阶段)</th>
+                            <th>熟食文明 (发展阶段)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>食物处理</td>
+                            <td>生食、带毛带血</td>
+                            <td>烹饪、加工熟食</td>
+                        </tr>
+                        <tr>
+                            <td>营养吸收</td>
+                            <td>较低，消化负担重</td>
+                            <td>较高，易于吸收</td>
+                        </tr>
+                        <tr>
+                            <td>疾病风险</td>
+                            <td>寄生虫和细菌感染高</td>
+                            <td>通过高温杀菌降低风险</td>
+                        </tr>
+                        <tr>
+                            <td>大脑发育</td>
+                            <td>缓慢，能量受限</td>
+                            <td>加速，为智慧诞生提供物质基础</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-container">
+                <details>
+                    <summary>“茹毛饮血”和“刀耕火种”有什么区别？</summary>
+                    <div class="faq-content">
+                        <p>这两个词虽然都带有原始色彩，但侧重点不同。“茹毛饮血”主要指饮食方式，强调生食；而“刀耕火种”指农业生产方式，强调利用火烧荒地开垦。两者共同描绘了人类早期的生存状态，但领域不同。</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>人类是什么时候开始吃熟食的？</summary>
+                    <div class="faq-content">
+                        <p>根据考古证据，人类大约在170万年前（直立人时期）就开始有意或无意地使用火，但真正广泛掌握控制火并开始大量食用熟食，通常认为是在旧石器时代中晚期，大约在40万到100万年前。</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>为什么吃熟食对人类进化如此重要？</summary>
+                    <div class="faq-content">
+                        <p>熟食能杀死食物中的病原体，减少消化系统的负担，并释放出更多原本难以消化的营养（如淀粉）。这为人类大脑的快速生长提供了充足的能量，是智人出现的关键因素之一。</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 茹毛饮血探索指南 - 原始文明科普平台</p>
+            <p>致力于普及史前历史与人类进化知识，让更多人了解文明的起源。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
