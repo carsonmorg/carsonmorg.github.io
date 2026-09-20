@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="地沟油记者深入调查，揭露餐饮业地沟油回收与非法加工产业链，报道食品安全监管漏洞，提供鉴别地沟油的方法及维权指南。">
+    <meta name="keywords" content="地沟油,记者,食品安全调查,地沟油鉴别,餐饮黑幕,食品安全">
+    <title>地沟油记者-食品安全调查与行业黑幕揭露</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #f44336;
+            --dark-bg: #1a1a1a;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-gray: #f5f5f5;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-gray);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: #b71c1c;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Investigation Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-tag {
+            background-color: #ffebee;
+            color: var(--primary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Deep Dive / Feature */
+        .feature-section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 60px;
+            border: 1px solid #eee;
+        }
+
+        .feature-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature-content h2 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .feature-content p {
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .warning-box {
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 16px;
+            margin: 20px 0;
+            color: #e65100;
+        }
+
+        /* Guide Section */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .guide-column h3 {
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .guide-list {
+            list-style: none;
+        }
+
+        .guide-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .guide-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: #fff;
+            border-radius: var(--border-radius);
+            margin-bottom: 16px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: #aaa;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .header-container {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                <span>暗流调查</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">调查报道</a></li>
+                    <li><a href="#">鉴别指南</a></li>
+                    <li><a href="#">监管动态</a></li>
+                    <li><a href="#">举报通道</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta-btn">参与监督</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container" style="padding: 0;">
+            <h1>揭开餐桌下的阴影：<br>地沟油产业链深度调查</h1>
+            <p>作为长期关注食品安全的记者，我们深入暗巷与工厂，记录地沟油从泔水桶到餐桌的完整路径，为您提供最权威的调查数据与防范知识。</p>
+            <a href="#investigation" class="cta-btn" style="background: transparent; border: 2px solid #fff;">查看调查报告</a>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>12</h3>
+                    <p>深入调查的地下工厂</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>揭露的非法回收网络</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>真实曝光的监管案例</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Investigation Section -->
+        <section id="investigation">
+            <div class="section-title">
+                <h2>调查报道</h2>
+                <a href="#" style="font-size: 0.9rem; color: var(--text-light);">查看全部 &rarr;</a>
+            </div>
+            
+            <div class="grid-3">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/oil1/400/250" alt="地沟油加工现场" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">暗访实录</span>
+                        <h3>深夜的“炼油厂”：探访地沟油黑作坊</h3>
+                        <p>记者乔装成废油收购商，潜入城乡结合部，记录了地沟油经过脱色、脱臭后伪装成“地沟油”流向市场的全过程。</p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/oil2/400/250" alt="餐馆后厨" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">餐饮黑幕</span>
+                        <h3>后厨的秘密：如何识别“老油”循环使用</h3>
+                        <p>通过走访多家小型餐馆，我们发现部分商家通过过滤、加热的方式，将隔夜油重复使用，严重危害消费者健康。</p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/oil3/400/250" alt="执法部门行动" class="card-img">
+                    <div class="card-body">
+                        <span class="card-tag">监管行动</span>
+                        <h3>雷霆出击：多部门联合查处地沟油案件</h3>
+                        <p>近期，食品药品监督管理局开展专项整治行动，成功捣毁一批利用废弃油脂制售食用油的窝点，涉案金额巨大。</p>
+                        <a href="#" class="read-more">阅读全文</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Deep Dive Feature -->
+        <section class="feature-section">
+            <div class="feature-content">
+                <h2>地沟油到底有多“毒”？</h2>
+                <p>地沟油是一类非食用的油脂，包括从地沟、废弃食用油脂中回收的油脂和反复使用的炸油。根据记者查阅的食品安全检测报告，地沟油中含有大量的黄曲霉素、苯并芘等强致癌物质。长期摄入不仅会导致肠胃不适，更会增加患肝癌、肠癌的风险。</p>
+                
+                <div class="warning-box">
+                    <strong>记者提示：</strong> 目前市面上所谓的“地沟油”不仅指从下水道提取的油，还包括“潲水油”（泔水油）和“回流油”（餐馆回收使用的炸油）。这些油在高温反复加热后，氧化产物严重超标，严禁食用。
+                </div>
+
+                <p>为了彻底切断这一产业链，我们需要从源头管控餐饮企业的废油排放，并利用先进的生物检测技术进行筛查。</p>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide">
+            <div class="section-title">
+                <h2>鉴别与防范指南</h2>
+            </div>
+            
+            <div class="guide-grid">
+                <div class="guide-column">
+                    <h3>如何在家自测？</h3>
+                    <ul class="guide-list">
+                        <li><strong>看色泽：</strong> 正常食用油清亮透明，地沟油通常呈浑浊或深褐色，且油面可能有泡沫。</li>
+                        <li><strong>闻气味：</strong> 地沟油往往有明显的酸败味、哈喇味或陈腐的油脂味。</li>
+                        <li><strong>尝味道：</strong> 滴一滴油在舌尖，劣质油会有苦涩、酸腐的口感。</li>
+                        <li><strong>滴水测试：</strong> 将油滴入冷水中，正常油会扩散成圆点，劣质油则聚集成团。</li>
+                    </ul>
+                </div>
+                <div class="guide-column">
+                    <h3>消费者如何维权？</h3>
+                    <ul class="guide-list">
+                        <li><strong>保留证据：</strong> 拍摄餐厅环境、后厨卫生状况及剩余油样，保留消费凭证。</li>
+                        <li><strong>及时举报：</strong> 拨打12315消费者投诉热线或通过政务平台进行实名举报。</li>
+                        <li><strong>寻求检测：</strong> 在专业机构支持下，对可疑油样进行脂肪酸组成等指标检测。</li>
+                        <li><strong>拒绝“老油”：</strong> 避免在路边摊、卫生条件差的餐馆食用油炸食品。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="section-title">
+                <h2>常见问题 (FAQ)</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">地沟油能提炼成生物柴油吗？<span>+</span></div>
+                <div class="faq-answer">正规的地沟油确实可以经过工业提炼转化为生物柴油或工业润滑脂，但这需要符合国家环保标准和工业规范，严禁直接流入食品领域。</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">国家对于废弃食用油脂的管理有什么规定？<span>+</span></div>
+                <div class="faq-answer">国家实行废弃食用油脂产生登记制度，并要求产生单位与有资质的回收单位签订合同，建立台账，实现闭环管理，防止回流餐桌。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">为什么地沟油屡禁不止？<span>+</span></div>
+                <div class="faq-answer">主要由于非法回收成本低、暴利高，且部分监管存在盲区。此外，餐饮业废油处理需要专业设备和成本，部分商家为了降低成本铤而走险。</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系方式</a>
+                <a href="#">隐私政策</a>
+            </div>
+            <p>&copy; 2023 暗流调查网. 保留所有权利。</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #666;">本网站内容仅供科普与警示，不构成任何投资或消费建议。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to toggle FAQ answers
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                // Close others if needed (optional, currently allowing multiple open)
+                // But for accordion style, we might want to close others:
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    if (ans !== answer) ans.style.display = 'none';
+                });
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    item.querySelector('span').textContent = '+';
+                } else {
+                    answer.style.display = 'block';
+                    item.querySelector('span').textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
