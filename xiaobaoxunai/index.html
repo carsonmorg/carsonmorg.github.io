@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="小宝寻爱 - 探索浪漫爱情故事，提供恋爱指南与情感建议，分享温馨感人的爱情经历。">
+    <meta name="keywords" content="小宝寻爱, 爱情故事, 恋爱指南, 情感咨询, 浪漫故事">
+    <title>小宝寻爱 - 温馨爱情故事与恋爱指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --secondary-color: #ff4757;
+            --accent-color: #ffa502;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .btn-subscribe {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .btn-subscribe:hover {
+            opacity: 0.9;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff0f3 0%, #ffeaa7 100%);
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 30px;
+            border: 2px solid transparent;
+            box-shadow: var(--shadow);
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Sections */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Stories Grid */
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            backdrop-filter: blur(4px);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-excerpt {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-light);
+            border-top: 1px solid #f1f1f1;
+            padding-top: 15px;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background: white;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .guide-content h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .guide-content p {
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .guide-steps {
+            margin-top: 30px;
+        }
+
+        .step {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            cursor: pointer;
+        }
+
+        summary {
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 20px;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-content {
+            margin-top: 15px;
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2f3542;
+            color: #dfe4ea;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            opacity: 0.7;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .footer-col ul li a:hover {
+            opacity: 1;
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>❤</span> 小宝寻爱
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#stories">精选故事</a></li>
+                    <li><a href="#guide">恋爱指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-subscribe">订阅更新</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>发现属于你的爱情</h1>
+                <p>无论你是正在寻找真爱的单身人士，还是希望重燃激情的情侣，这里都有温暖的故事和实用的建议陪伴你。</p>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索爱情故事、情感话题或恋爱技巧...">
+                    <button aria-label="搜索">🔍</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Stories Section -->
+        <section id="stories" class="container">
+            <div class="section-title">
+                <h2>精选故事</h2>
+                <p>真实记录，触动人心</p>
+            </div>
+            
+            <div class="stories-grid">
+                <!-- Story Card 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/love1/400/300" alt="雨中相遇">
+                        <span class="card-badge">感人</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">雨中相遇的图书馆</h3>
+                        <p class="card-excerpt">一场突如其来的暴雨，让两个素不相识的陌生人在图书馆的角落里共用了一把伞。那一天的雨声，成了他们记忆中最温柔的背景音...</p>
+                        <div class="card-meta">
+                            <span>👤 作者：小爱</span>
+                            <span>📅 2023-10-15</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story Card 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/love2/400/300" alt="异地恋">
+                        <span class="card-badge">异地恋</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">跨越两千公里的守护</h3>
+                        <p class="card-excerpt">他们相隔两千公里，每天晚上视频通话成了唯一的慰藉。虽然不能牵手，但两颗心却因为信任和坚持靠得更近...</p>
+                        <div class="card-meta">
+                            <span>👤 作者：远方</span>
+                            <span>📅 2023-10-12</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Story Card 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/love3/400/300" alt="初恋回忆">
+                        <span class="card-badge">怀旧</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">那年夏天，单车后座</h3>
+                        <p class="card-excerpt">毕业季的操场，飞扬的衬衫，还有那个笨拙却真诚的告白。多年后回首，才发现青春里最美好的不是结局，而是那个夏天...</p>
+                        <div class="card-meta">
+                            <span>👤 作者：时光</span>
+                            <span>📅 2023-10-10</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>恋爱指南</h2>
+                    <p>从心动到白头，你需要知道的技巧</p>
+                </div>
+
+                <div class="guide-grid">
+                    <div class="guide-image">
+                        <img src="https://picsum.photos/seed/guide/600/400" alt="情侣互动" style="width:100%; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+                    </div>
+                    <div class="guide-content">
+                        <h3>如何建立健康的亲密关系？</h3>
+                        <p>亲密关系不仅仅是浪漫的激情，更是深度的信任与理解。建立健康关系的核心在于有效沟通、相互尊重和共同成长。</p>
+                        
+                        <div class="guide-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <strong>学会倾听</strong>
+                                    <p style="font-size:13px; color:var(--text-light);">不要急于打断或给出解决方案，先理解对方的情绪。</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <strong>保持独立</strong>
+                                    <p style="font-size:13px; color:var(--text-light);">健康的爱情是两个完整的人的并肩同行，而非依附。</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <strong>表达感激</strong>
+                                    <p style="font-size:13px; color:var(--text-light);">每天发现对方的优点并说出来，这能极大增强安全感。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="section-title">
+                <h2>常见问题</h2>
+                <p>关于“小宝寻爱”的解答</p>
+            </div>
+
+            <details>
+                <summary>什么是“小宝寻爱”？</summary>
+                <div class="faq-content">
+                    “小宝寻爱”是一个专注于分享真实情感故事、提供恋爱建议和情感咨询服务的平台。我们致力于帮助用户在复杂的人际关系中找到方向，发现爱的美好。
+                </div>
+            </details>
+
+            <details>
+                <summary>如何投稿我的故事？</summary>
+                <div class="faq-content">
+                    我们非常欢迎用户投稿。请在“联系我们”页面填写投稿表单，并附上你的故事简介和联系方式。我们的编辑团队会在审核后与您取得联系。
+                </div>
+            </details>
+
+            <details>
+                <summary>恋爱中遇到问题可以咨询吗？</summary>
+                <div class="faq-content">
+                    是的，我们提供基础的情感咨询板块。对于比较复杂或紧急的情感困扰，建议寻求专业心理咨询师的帮助。
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>小宝寻爱</h3>
+                    <p>记录每一个温暖的瞬间，陪伴你走过情感的每一个阶段。爱，是永恒的主题。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">平台介绍</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>探索</h4>
+                    <ul>
+                        <li><a href="#">最新故事</a></li>
+                        <li><a href="#">热门话题</a></li>
+                        <li><a href="#">情感专栏</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助</h4>
+                    <ul>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 小宝寻爱. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
