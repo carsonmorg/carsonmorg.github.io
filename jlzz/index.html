@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国人 jlzz - 历史纪录片与民族精神传承专题</title>
+    <meta name="description" content="中国人jlzz专题，致力于展示中华民族的历史演变、文化传承与精神风貌。提供深度历史解读、传统节日习俗、民族艺术鉴赏及现代中国发展历程的图文资料。">
+    <meta name="keywords" content="中国人, jlzz, 中华民族, 历史演变, 文化传承, 民族精神">
+    <style>
+        :root {
+            --primary-color: #8B4513; /* 赭石色，象征历史与大地 */
+            --secondary-color: #D2691E; /* 巧克力色，用于强调 */
+            --bg-color: #F9F7F2; /* 米宣纸色 */
+            --text-main: #2C2C2C; /* 深灰，利于阅读 */
+            --text-light: #666666;
+            --white: #FFFFFF;
+            --border-color: #E0D6C8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-right: 8px;
+            font-family: "SimSun", serif;
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* 首屏 Hero */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/seed/history_china/1600/900');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-family: "SimSun", serif;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* 通用板块样式 */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-family: "SimSun", serif;
+        }
+
+        .section-header .divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 0 auto;
+        }
+
+        /* 核心概念：民族精神 */
+        .spirit-section {
+            background-color: var(--white);
+        }
+
+        .spirit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .spirit-card {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .spirit-card:hover {
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.1);
+            border-color: var(--secondary-color);
+        }
+
+        .spirit-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .spirit-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .spirit-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* 历史演变时间轴 */
+        .timeline-section {
+            background-color: var(--bg-color);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--white);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+            text-align: right;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: var(--white);
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .content span {
+            font-size: 12px;
+            color: var(--text-light);
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* 文化瑰宝 */
+        .culture-section {
+            background-color: var(--white);
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .culture-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            aspect-ratio: 3/4;
+        }
+
+        .culture-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .culture-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: var(--white);
+        }
+
+        .culture-overlay h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .culture-overlay p {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .culture-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* FAQ 常见问题 */
+        .faq-section {
+            background-color: #F4F1EA;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background-color: var(--white);
+            margin-bottom: 15px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            list-style: none;
+            position: relative;
+            padding-right: 40px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-content {
+            padding: 20px;
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2C2C2C;
+            color: #999;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+        }
+
+        /* 响应式适配 */
+        @media screen and (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .left {
+                text-align: left;
+            }
+
+            .culture-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo"><span>【</span>中国人 jlzz</a>
+            <nav>
+                <ul>
+                    <li><a href="#spirit" class="active">民族精神</a></li>
+                    <li><a href="#history">历史演变</a></li>
+                    <li><a href="#culture">文化瑰宝</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探寻华夏根脉</h1>
+                <p>中国人jlzz，不仅是历史的记录，更是民族精神的延续。从远古洪荒到现代文明，共同书写中华民族的奋斗篇章。</p>
+                <a href="#history" class="btn">开始探索</a>
+            </div>
+        </section>
+
+        <!-- 核心精神板块 -->
+        <section id="spirit" class="spirit-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>中华民族精神</h2>
+                    <div class="divider"></div>
+                    <p style="margin-top: 15px; color: var(--text-light);">凝聚中华民族生生不息的强大动力</p>
+                </div>
+                <div class="spirit-grid">
+                    <div class="spirit-card">
+                        <div class="spirit-icon">🛡️</div>
+                        <h3>团结统一</h3>
+                        <p>历经千年风雨，各族人民紧密团结，共同维护国家统一和民族团结，是中华民族最深厚的情感纽带。</p>
+                    </div>
+                    <div class="spirit-card">
+                        <div class="spirit-icon">🔥</div>
+                        <h3>爱好和平</h3>
+                        <p>崇尚和谐，追求和平，反对侵略，以和为贵，致力于构建人类命运共同体，是中华文明的重要特质。</p>
+                    </div>
+                    <div class="spirit-card">
+                        <div class="spirit-icon">⛰️</div>
+                        <h3>勤劳勇敢</h3>
+                        <p>不畏艰难，勇于开拓，用双手建设家园，用智慧克服挑战，创造了灿烂的古代文明。</p>
+                    </div>
+                    <div class="spirit-card">
+                        <div class="spirit-icon">🧠</div>
+                        <h3>自强不息</h3>
+                        <p>发愤图强，永不放弃，在逆境中崛起，在挑战中前行，展现出顽强的生命力和进取精神。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 历史演变板块 -->
+        <section id="history" class="timeline-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>历史演变历程</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="content">
+                            <span>约公元前2070年</span>
+                            <h3>夏朝建立</h3>
+                            <p>中国历史上第一个世袭制朝代，标志着“家天下”时代的开始，华夏文明进入文明社会。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="content">
+                            <span>公元前221年</span>
+                            <h3>秦朝大一统</h3>
+                            <p>秦始皇统一六国，建立了中国历史上第一个中央集权的封建王朝，奠定了中国两千多年政治制度的基本格局。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="content">
+                            <span>公元618年</span>
+                            <h3>唐朝盛世</h3>
+                            <p>国力强盛，文化繁荣，万邦来朝，是中华民族历史上最辉煌的时期之一，开放包容。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="content">
+                            <span>1840年 - 1949年</span>
+                            <h3>近现代抗争与复兴</h3>
+                            <p>中国人民经历了从屈辱抗争到寻求救国道路的艰难历程，最终在中国共产党的领导下走向独立与复兴。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 文化瑰宝板块 -->
+        <section id="culture" class="culture-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>传统文化瑰宝</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="culture-grid">
+                    <div class="culture-item">
+                        <img src="https://picsum.photos/seed/lantern/400/500" alt="中国灯笼">
+                        <div class="culture-overlay">
+                            <h4>传统节日</h4>
+                            <p>春节、中秋、端午等传统节日承载着丰富的文化内涵与民族情感。</p>
+                        </div>
+                    </div>
+                    <div class="culture-item">
+                        <img src="https://picsum.photos/seed/pottery/400/500" alt="青花瓷器">
+                        <div class="culture-overlay">
+                            <h4>陶瓷艺术</h4>
+                            <p>中国瓷器闻名世界，不仅是实用器皿，更是精美的艺术品。</p>
+                        </div>
+                    </div>
+                    <div class="culture-item">
+                        <img src="https://picsum.photos/seed/kungfu/400/500" alt="功夫武术">
+                        <div class="culture-overlay">
+                            <h4>功夫武术</h4>
+                            <p>刚柔并济，内外兼修，展现了中国人的体魄与意志。</p>
+                        </div>
+                    </div>
+                    <div class="culture-item">
+                        <img src="https://picsum.photos/seed/ink/400/500" alt="水墨山水">
+                        <div class="culture-overlay">
+                            <h4>水墨山水</h4>
+                            <p>写意传神，意境深远，体现了中国人独特的审美情趣。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ 板块 -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="faq-container">
+                    <details>
+                        <summary>什么是“jlzz”的深层含义？</summary>
+                        <div class="faq-content">
+                            “jlzz”是“历史演变”的拼音缩写。在关注中国人这一主题时，理解其历史演变是认识现代中国人身份认同和文化根基的关键。它涵盖了从远古先民到现代社会的全过程。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>中华民族精神包含哪些具体内容？</summary>
+                        <div class="faq-content">
+                            主要包含团结统一、爱好和平、勤劳勇敢、自强不息四个方面。这四者相互联系，构成了中华民族精神的核心体系。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>如何传承和发扬中华传统文化？</summary>
+                        <div class="faq-content">
+                            传承需要从教育、实践和传播三个层面入手。通过学习历史、参与民俗活动、利用新媒体传播等方式，让传统文化在现代社会中焕发新的活力。
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                        本站致力于弘扬中华文化，展示中国人的精神风貌与历史演变，为读者提供权威、全面的历史文化资讯。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#spirit">民族精神</a></li>
+                        <li><a href="#history">历史演变</a></li>
+                        <li><a href="#culture">文化瑰宝</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">历史文献</a></li>
+                        <li><a href="#">民俗研究</a></li>
+                        <li><a href="#">民族志</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 中国人 jlzz 专题网 版权所有. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
