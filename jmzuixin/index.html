@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jm最新版本下载 - 官方安全安装包与功能详解</title>
+    <meta name="description" content="jm最新版本下载资源页面，提供官方安全安装包、版本更新日志、功能特性说明及系统兼容性指南，帮助用户快速获取最新版软件。">
+    <meta name="keywords" content="jm最新版本下载, jm下载, jm官方版, jm更新, jm安装包">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #64748b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #475569;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-download-nav {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-download-nav:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .download-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .version-badge {
+            display: inline-block;
+            background-color: #dbeafe;
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .main-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding: 16px 40px;
+            border-radius: var(--radius-md);
+            margin-bottom: 30px;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .main-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+            background-color: var(--primary-hover);
+        }
+
+        .download-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Features Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-sub);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* Update Log */
+        .update-log {
+            background-color: var(--card-bg);
+        }
+
+        .log-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .log-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .log-item:last-child {
+            border-bottom: none;
+        }
+
+        .log-date {
+            min-width: 120px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .log-content h4 {
+            margin-bottom: 5px;
+        }
+
+        .log-content ul {
+            padding-left: 20px;
+            color: var(--text-sub);
+        }
+
+        .log-content li {
+            margin-bottom: 4px;
+        }
+
+        /* Compatibility & FAQ */
+        .compatibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .compat-box {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: var(--radius-md);
+        }
+
+        .compat-box h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .compat-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-sub);
+        }
+
+        .compat-list li::before {
+            content: "✓";
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.2s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+            background-color: #f8fafc;
+            color: var(--text-sub);
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+            max-height: 200px; /* Approximate height */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .download-card {
+                padding: 25px;
+            }
+
+            .main-download-btn {
+                width: 100%;
+                justify-content: center;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>JM助手</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#features">功能特性</a>
+                <a href="#update">更新日志</a>
+                <a href="#compatibility">系统要求</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#download" class="btn-download-nav">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="download">
+            <div class="container">
+                <h1>获取 JM 最新版本下载</h1>
+                <p>体验更流畅、更安全的操作体验。版本 V3.2.0 已发布，修复多项已知问题并优化核心性能。</p>
+                
+                <div class="download-card">
+                    <span class="version-badge">当前版本：v3.2.0 (2023-10)</span>
+                    <a href="#" class="main-download-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        下载 JM 安装包
+                    </a>
+                    <div class="download-info">
+                        <div class="info-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            大小：约 45.2 MB
+                        </div>
+                        <div class="info-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            安全认证：官方发布
+                        </div>
+                        <div class="info-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            更新时间：2023-10-25
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>全新功能特性</h2>
+                    <p>本次更新带来了多项核心优化，旨在为您提供更高效的使用体验。</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>性能大幅提升</h3>
+                        <p>针对启动速度和运行流畅度进行了深度优化，资源占用降低 30%，操作响应更加迅速。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>安全防护升级</h3>
+                        <p>内置最新的安全引擎，实时扫描潜在风险，保护您的数据隐私，确保安装包来源安全可靠。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>界面全面美化</h3>
+                        <p>采用全新的设计语言，优化暗黑模式支持，调整 UI 布局，让视觉体验更加舒适。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🔗</div>
+                        <h3>兼容性增强</h3>
+                        <p>修复了旧版本在特定系统环境下的崩溃问题，现已完美支持最新的操作系统版本。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Update Log Section -->
+        <section class="section update-log" id="update">
+            <div class="container">
+                <div class="section-header">
+                    <h2>版本更新日志</h2>
+                    <p>查看最近的改动详情，了解我们正在改进的地方。</p>
+                </div>
+                <div class="log-container">
+                    <div class="log-item">
+                        <div class="log-date">v3.2.0</div>
+                        <div class="log-content">
+                            <h4>2023-10-25 发布</h4>
+                            <ul>
+                                <li>新增智能任务调度算法，提升后台处理效率。</li>
+                                <li>修复了在 Windows 11 下可能出现的窗口显示异常。</li>
+                                <li>优化了文件传输模块，传输速度提升 15%。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="log-item">
+                        <div class="log-date">v3.1.5</div>
+                        <div class="log-content">
+                            <h4>2023-09-10 发布</h4>
+                            <ul>
+                                <li>修复了用户反馈的账号同步延迟问题。</li>
+                                <li>增强了密码找回流程的安全性。</li>
+                                <li>移除了不再使用的第三方依赖库。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="log-item">
+                        <div class="log-date">v3.1.0</div>
+                        <div class="log-content">
+                            <h4>2023-07-15 发布</h4>
+                            <ul>
+                                <li>首次推出移动端适配版本。</li>
+                                <li>新增多语言支持（简体中文、English）。</li>
+                                <li>重构核心数据存储结构。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compatibility & FAQ Section -->
+        <section class="section" id="compatibility">
+            <div class="container">
+                <div class="section-header">
+                    <h2>系统要求与常见问题</h2>
+                </div>
+                <div class="compatibility-grid">
+                    <div class="compat-box">
+                        <h3>💻 系统兼容性</h3>
+                        <ul class="compat-list">
+                            <li>Windows 10 / 11 (64位)</li>
+                            <li>macOS 10.14 及以上版本</li>
+                            <li>Android 8.0 及以上</li>
+                            <li>iOS 12.0 及以上</li>
+                        </ul>
+                    </div>
+                    <div class="compat-box">
+                        <h3>❓ 常见问题 (FAQ)</h3>
+                        <div class="faq-item">
+                            <div class="faq-question">下载后如何安装？</div>
+                            <div class="faq-answer">下载安装包后，双击运行。按照向导提示点击“下一步”即可完成安装。安装过程中请勿关闭窗口。</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">旧版本可以升级吗？</div>
+                            <div class="faq-answer">可以。直接覆盖安装新版本即可，您的个人设置和账号数据通常会自动保留。</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">如何验证下载文件的完整性？</div>
+                            <div class="faq-answer">建议使用 Windows 自带的校验功能或第三方校验工具对比 SHA-256 哈希值。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于 JM</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">
+                        JM 致力于为用户提供最优质的软件服务体验。我们坚持安全、稳定、高效的原则，不断迭代更新，满足用户多样化的需求。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">功能介绍</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>support@jm-example.com</li>
+                        <li>400-123-4567</li>
+                        <li>工作时间：9:00 - 18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 JM Official. All rights reserved. 仅供演示用途，非真实官方网站。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
